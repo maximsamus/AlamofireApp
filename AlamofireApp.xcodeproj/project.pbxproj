@@ -7,19 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F7A6936C285A0096006B75ED /* Starships.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6936B285A0096006B75ED /* Starships.swift */; };
+		F7A6936E285A00F9006B75ED /* Starship.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6936D285A00F9006B75ED /* Starship.swift */; };
+		F7A69371285A031A006B75ED /* StartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A69370285A031A006B75ED /* StartTableViewController.swift */; };
 		F7D913FA2858B7C7002CEF00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D913F92858B7C7002CEF00 /* AppDelegate.swift */; };
 		F7D913FC2858B7C7002CEF00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D913FB2858B7C7002CEF00 /* SceneDelegate.swift */; };
-		F7D913FE2858B7C7002CEF00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D913FD2858B7C7002CEF00 /* ViewController.swift */; };
 		F7D914012858B7C7002CEF00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D913FF2858B7C7002CEF00 /* Main.storyboard */; };
 		F7D914032858B7C8002CEF00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7D914022858B7C8002CEF00 /* Assets.xcassets */; };
 		F7D914062858B7C8002CEF00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7D914042858B7C8002CEF00 /* LaunchScreen.storyboard */; };
+		F7D9140F2858B80B002CEF00 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F7D9140E2858B80B002CEF00 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F7A6936B285A0096006B75ED /* Starships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starships.swift; sourceTree = "<group>"; };
+		F7A6936D285A00F9006B75ED /* Starship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Starship.swift; sourceTree = "<group>"; };
+		F7A69370285A031A006B75ED /* StartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTableViewController.swift; sourceTree = "<group>"; };
 		F7D913F62858B7C7002CEF00 /* AlamofireApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D913F92858B7C7002CEF00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7D913FB2858B7C7002CEF00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7D913FD2858B7C7002CEF00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F7D914002858B7C7002CEF00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7D914022858B7C8002CEF00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7D914052858B7C8002CEF00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -31,12 +36,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7D9140F2858B80B002CEF00 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F7A693692859F9BE006B75ED /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7D914022858B7C8002CEF00 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7A6936A285A007E006B75ED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6936B285A0096006B75ED /* Starships.swift */,
+				F7A6936D285A00F9006B75ED /* Starship.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F7A6936F285A0190006B75ED /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		F7D913ED2858B7C7002CEF00 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +86,41 @@
 		F7D913F82858B7C7002CEF00 /* AlamofireApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7D913F92858B7C7002CEF00 /* AppDelegate.swift */,
-				F7D913FB2858B7C7002CEF00 /* SceneDelegate.swift */,
-				F7D913FD2858B7C7002CEF00 /* ViewController.swift */,
-				F7D913FF2858B7C7002CEF00 /* Main.storyboard */,
-				F7D914022858B7C8002CEF00 /* Assets.xcassets */,
-				F7D914042858B7C8002CEF00 /* LaunchScreen.storyboard */,
-				F7D914072858B7C8002CEF00 /* Info.plist */,
+				F7A693692859F9BE006B75ED /* Resources */,
+				F7A6936F285A0190006B75ED /* Services */,
+				F7A6936A285A007E006B75ED /* Models */,
+				F7D914112858B834002CEF00 /* App */,
+				F7D914122858B951002CEF00 /* ViewContorollers */,
+				F7D914102858B823002CEF00 /* Storyboards */,
 			);
 			path = AlamofireApp;
+			sourceTree = "<group>";
+		};
+		F7D914102858B823002CEF00 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F7D914042858B7C8002CEF00 /* LaunchScreen.storyboard */,
+				F7D913FF2858B7C7002CEF00 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F7D914112858B834002CEF00 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F7D913F92858B7C7002CEF00 /* AppDelegate.swift */,
+				F7D913FB2858B7C7002CEF00 /* SceneDelegate.swift */,
+				F7D914072858B7C8002CEF00 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F7D914122858B951002CEF00 /* ViewContorollers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A69370285A031A006B75ED /* StartTableViewController.swift */,
+			);
+			path = ViewContorollers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +139,9 @@
 			dependencies = (
 			);
 			name = AlamofireApp;
+			packageProductDependencies = (
+				F7D9140E2858B80B002CEF00 /* Alamofire */,
+			);
 			productName = AlamofireApp;
 			productReference = F7D913F62858B7C7002CEF00 /* AlamofireApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +170,9 @@
 				Base,
 			);
 			mainGroup = F7D913ED2858B7C7002CEF00;
+			packageReferences = (
+				F7D9140D2858B80B002CEF00 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = F7D913F72858B7C7002CEF00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7D913FE2858B7C7002CEF00 /* ViewController.swift in Sources */,
+				F7A6936E285A00F9006B75ED /* Starship.swift in Sources */,
 				F7D913FA2858B7C7002CEF00 /* AppDelegate.swift in Sources */,
 				F7D913FC2858B7C7002CEF00 /* SceneDelegate.swift in Sources */,
+				F7A69371285A031A006B75ED /* StartTableViewController.swift in Sources */,
+				F7A6936C285A0096006B75ED /* Starships.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +353,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ASKBC27NSG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlamofireApp/Info.plist;
+				INFOPLIST_FILE = AlamofireApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +369,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,10 +382,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ASKBC27NSG;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AlamofireApp/Info.plist;
+				INFOPLIST_FILE = AlamofireApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +398,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +424,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F7D9140D2858B80B002CEF00 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F7D9140E2858B80B002CEF00 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F7D9140D2858B80B002CEF00 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F7D913EE2858B7C7002CEF00 /* Project object */;
 }
