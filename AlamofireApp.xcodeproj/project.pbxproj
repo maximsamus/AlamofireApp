@@ -92,8 +92,8 @@
 		F7D913F82858B7C7002CEF00 /* AlamofireApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7A69376285A05AE006B75ED /* Models */,
 				F7A693692859F9BE006B75ED /* Resources */,
+				F7A69376285A05AE006B75ED /* Models */,
 				F7A6936F285A0190006B75ED /* Services */,
 				F7D914112858B834002CEF00 /* App */,
 				F7D914122858B951002CEF00 /* ViewContorollers */,

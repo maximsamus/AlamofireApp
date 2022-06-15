@@ -8,11 +8,16 @@
 import Foundation
 
 struct Films: Decodable {
-  let count: Int
-  let all: [Film]
-  
-  enum CodingKeys: String, CodingKey {
-    case count
-    case all = "results"
-  }
+    let count: Int
+    let all: [Film]
+    
+    enum CodingKeys: String, CodingKey {
+        case count
+        case all = "results"
+    }
+    
+    enum Link: String {
+        case films = "https://swapi.dev/api/films"
+        case starships =  "https://swapi.dev/api/starships"
+    }
 }
