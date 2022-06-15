@@ -62,7 +62,7 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
-		F7A69376285A05AE006B75ED /* Model */ = {
+		F7A69376285A05AE006B75ED /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F7A69372285A054C006B75ED /* Films.swift */,
@@ -70,7 +70,7 @@
 				F7A6936D285A00F9006B75ED /* Starship.swift */,
 				F7A69374285A0569006B75ED /* Film.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F7D913ED2858B7C7002CEF00 = {
@@ -92,7 +92,7 @@
 		F7D913F82858B7C7002CEF00 /* AlamofireApp */ = {
 			isa = PBXGroup;
 			children = (
-				F7A69376285A05AE006B75ED /* Model */,
+				F7A69376285A05AE006B75ED /* Models */,
 				F7A693692859F9BE006B75ED /* Resources */,
 				F7A6936F285A0190006B75ED /* Services */,
 				F7D914112858B834002CEF00 /* App */,
