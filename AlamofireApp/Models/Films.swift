@@ -16,8 +16,4 @@ struct Films: Decodable {
         case all = "results"
     }
     
-    enum Link: String {
-        case films = "https://swapi.dev/api/films"
-        case starships =  "https://swapi.dev/api/starships"
-    }
 }

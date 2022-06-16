@@ -17,25 +17,21 @@ class StartTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        fetchFilms(url: "https://swapi.dev/api/films")
+        fetchFilms(url: NetworkManager.Link.films.rawValue)
     }
-    
+
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         films.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Film", for: indexPath)
         
         var content = cell.defaultContentConfiguration()
         content.text = films[indexPath.row].title
-        //        content.attributedText = ""
         content.secondaryText = films[indexPath.row].releaseDate
-        //        cell.textLabel?.text = String(indexPath.row)
-        
         cell.contentConfiguration = content
         return cell
     }
