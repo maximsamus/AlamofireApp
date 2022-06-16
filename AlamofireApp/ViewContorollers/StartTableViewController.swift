@@ -17,18 +17,12 @@ class StartTableViewController: UITableViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
-        fetchFilms()
+        fetchFilms(url: "https://swapi.dev/api/films")
     }
     
     // MARK: - Table view data source
     
-    //    override func numberOfSections(in tableView: UITableView) -> Int {
-    //        // #warning Incomplete implementation, return the number of sections
-    //        return 0
-    //    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         films.count
     }
     
@@ -45,22 +39,28 @@ class StartTableViewController: UITableViewController, UISearchBarDelegate {
         cell.contentConfiguration = content
         return cell
     }
-    
-    
-    
 }
-
 
 extension StartTableViewController {
     
-    func fetchFilms() {
-        AF.request("https://swapi.dev/api/films")
-            .validate()
-            .responseDecodable(of: Films.self) { response in
-                guard let films = response.value else { return }
-                self.films = films.all
-                self.tableView.reloadData()
-            }
+    private func fetchFilms(url: String) {
+        NetworkManager.shared.fetchFilms(from: url) { films in
+                            self.films = films.all
+                            self.tableView.reloadData()
+        }
+        
+        
+        
     }
+    
+//    func fetchFilms() {
+//        AF.request("https://swapi.dev/api/films")
+//            .validate()
+//            .responseDecodable(of: Films.self) { response in
+//                guard let films = response.value else { return }
+//                self.films = films.all
+//                self.tableView.reloadData()
+//            }
+//    }
     
 }
