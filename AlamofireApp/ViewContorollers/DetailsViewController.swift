@@ -65,7 +65,7 @@ extension DetailsViewController: UITableViewDataSource {
 // MARK: - Fetch data
 
 extension DetailsViewController {
-    func fetchList() {
+    private func fetchList() {
         guard let data = data else { return }
         switch data {
         case is Film:

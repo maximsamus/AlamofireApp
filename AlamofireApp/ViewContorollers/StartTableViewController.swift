@@ -23,24 +23,21 @@ class StartTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //items.count
-        films.count
+        items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Film", for: indexPath)
-        
         var content = cell.defaultContentConfiguration()
-        content.text = films[indexPath.row].title
-        content.secondaryText = films[indexPath.row].releaseDate
+        content.text = items[indexPath.row].titleLabelText
+        content.secondaryText = items[indexPath.row].subtitleLabelText
         cell.contentConfiguration = content
         return cell
     }
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        selectedItem = films[indexPath.row]
+        selectedItem = items[indexPath.row]
         return indexPath
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +51,7 @@ extension StartTableViewController {
     
     private func fetchFilms(url: String) {
         NetworkManager.shared.fetchFilms(from: url) { films in
-            self.films = films.all
+            self.items = films.all
             self.tableView.reloadData()
         }
     }
