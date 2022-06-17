@@ -5,8 +5,6 @@
 //  Created by Максим Самусь on 15.06.2022.
 //
 
-import Foundation
-
 struct Films: Decodable {
     let count: Int
     let all: [Film]
@@ -15,5 +13,4 @@ struct Films: Decodable {
         case count
         case all = "results"
     }
-    
 }

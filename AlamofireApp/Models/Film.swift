@@ -5,8 +5,6 @@
 //  Created by Максим Самусь on 15.06.2022.
 //
 
-import Foundation
-
 struct Film: Decodable {
   let id: Int
   let title: String
@@ -27,32 +25,21 @@ struct Film: Decodable {
   }
 }
 
-//extension Film: Displayable {
-//  var titleLabelText: String {
-//    title
-//  }
-//  
-//  var subtitleLabelText: String {
-//    "Episode \(String(id))"
-//  }
-//  
-//  var item1: (label: String, value: String) {
-//    ("DIRECTOR", director)
-//  }
-//  
-//  var item2: (label: String, value: String) {
-//    ("PRODUCER", producer)
-//  }
-//  
-//  var item3: (label: String, value: String) {
-//    ("RELEASE DATE", releaseDate)
-//  }
-//  
-//  var listTitle: String {
-//    "STARSHIPS"
-//  }
-//  
-//  var listItems: [String] {
-//    starships
-//  }
-//}
+extension Film: Displayable {
+    
+  var titleLabelText: String { title }
+  var subtitleLabelText: String {
+    "Episode \(String(id))"
+  }
+  var item1: (label: String, value: String) {
+    ("DIRECTOR", director)
+  }
+  var item2: (label: String, value: String) {
+    ("PRODUCER", producer)
+  }
+  var item3: (label: String, value: String) {
+    ("RELEASE DATE", releaseDate)
+  }
+  var listTitle: String { "STARSHIPS" }
+  var listItems: [String] { starships }
+}
