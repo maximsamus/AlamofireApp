@@ -58,10 +58,4 @@ class NetworkManager {
         case films = "https://swapi.dev/api/films"
         case starships =  "https://swapi.dev/api/starships"
     }
-    
-    enum NetworkError: Error {
-        case invalidURL
-        case noData
-        case decodingError
-    }
 }
